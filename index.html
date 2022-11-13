@@ -57,7 +57,7 @@
                </div>
            </div>
          </div>
-  <button type="submit" class="btn btn-primary" onclick="myfunc()">Submit</button>
+  <button type="submit" class="btn btn-primary" id="submit" onclick="myfunc()">Submit</button>
   </form>  
     </div>
       <div class="container output">
@@ -85,6 +85,9 @@
       </div>
 </body>
 <script>
+  document.getElementById("submit").addEventListener("click", function(event){
+  event.preventDefault()
+});
   function myfunc()
   {
   var name=document.getElementById('name').value;
